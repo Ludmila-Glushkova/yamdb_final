@@ -5,11 +5,12 @@ from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import RefreshToken
 
-from .models import User
 from api.permissions import IsAdmin
+from api_yamdb.settings import DEFAULT_FROM_EMAIL
+
+from .models import User
 from .serializers import (UserSerializer, MeSerializer,
                           RegistrationSerializer, TokenSerializer)
-from api_yamdb.settings import DEFAULT_FROM_EMAIL
 
 
 class UserViewSet(viewsets.ModelViewSet):
