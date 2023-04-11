@@ -10,7 +10,7 @@ from api_yamdb.settings import DEFAULT_FROM_EMAIL
 
 from .models import User
 from .serializers import (MeSerializer, RegistrationSerializer,
-                           TokenSerializer, UserSerializer)
+                          TokenSerializer, UserSerializer)
 
 
 class UserViewSet(viewsets.ModelViewSet):
