@@ -1,10 +1,13 @@
+from django.db.models import Avg
+from django.shortcuts import get_object_or_404
+
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import viewsets, filters
+
 from rest_framework.pagination import PageNumberPagination
-from reviews.models import Category, Genre, Title, Review
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
-from django.shortcuts import get_object_or_404
-from django.db.models import Avg
+
+from reviews.models import Category, Genre, Title, Review
 
 from .filters import TitleFilter
 from .mixins import CreateListDeleteMixinSet
