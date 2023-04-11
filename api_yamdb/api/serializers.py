@@ -1,7 +1,7 @@
-from django.shortcuts import get_object_or_404
 from rest_framework import serializers
+from django.shortcuts import get_object_or_404
+from reviews.models import Category, Comment, Genre, Review, Title
 from rest_framework.relations import SlugRelatedField
-from reviews.models import Category, Genre, Title, Review, Comment, User
 
 
 class CategorySerializer(serializers.ModelSerializer):
